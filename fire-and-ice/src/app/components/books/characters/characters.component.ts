@@ -40,6 +40,7 @@ export class CharactersComponent implements OnInit {
       const res = await prom;
       characters.push(new Character(res.body));
     }
+    // TODO: extract the book names
     return Promise.resolve(characters);
   }
 

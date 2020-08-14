@@ -8,6 +8,7 @@ import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http'
 import { BooksComponent } from './components/books/books/books.component';
 import { AppComponent } from './components/app/app.component';
 import { CharactersComponent } from './components/books/characters/characters.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CharactersComponent } from './components/books/characters/characters.co
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    RouterModule,
   ],
   providers: [
     RequestrService,
