@@ -31,6 +31,9 @@ We **expect** the following features implemented using the Ice & Fire API:
 	- Compartmentalized data for the sake of usability & readability
 - We also expect your code to be documented & tested
 
+
+- **Note**: you may run into a CORS issue with the endpoints. You may need a plugin to remediate this issue. 
+
 ## Setup
 
 Make sure you have the following installed:
