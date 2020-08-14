@@ -1,0 +1,42 @@
+<div class="container">
+  <h1>Characters</h1>
+<table>
+  <th>Name</th>
+  <th>Culture</th>
+  <th>Birth Info</th>
+  <th>Titles</th>
+  <th>Aliases</th>
+  <th>Books</th>
+  <tr *ngFor="let char of characters">
+    <td>{{ char.name }}</td>
+    <td>{{ char.culture }}</td>
+    <td>{{ char.born }}</td>
+    <td>
+      <p *ngFor="let title of char.titles">{{ title }}</p>
+    </td>
+    <td>
+      <div *ngIf="char.aliases.length">
+        <div *ngIf="!char.showAliases">
+          <button class="btn-link" (click)="char.showAliases=!char.showAliases">show</button>
+        </div>
+        <div *ngIf="char.showAliases">
+        <button class="btn-link" (click)="char.showAliases=!char.showAliases">hide</button>
+        <p *ngFor="let alias of char.aliases">{{ alias }}</p>
+        </div>
+      </div>
+      <div *ngIf="!char.aliases.length">
+        No Aliases
+      </div>
+    </td>
+    <td>
+      <div *ngIf="!char.showBooks">
+        <button class="btn-link" (click)="char.showBooks=!char.showBooks">show</button>
+      </div>
+      <div *ngIf="char.showBooks">
+      <button class="btn-link" (click)="char.showBooks=!char.showBooks">hide</button>
+      <p *ngFor="let book of char.books">{{ book }}</p>
+      </div>
+    </td>
+  </tr>
+</table>
+</div>

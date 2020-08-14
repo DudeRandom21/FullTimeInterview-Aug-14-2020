@@ -1,3 +1,19 @@
-<p>
-  Add information about the books in here
-</p>
+<div class="container">
+  <h1>Books</h1>
+  <table>
+    <th>title</th>
+    <th>author</th>
+    <th>release year</th>
+    <th>isbn</th>
+    <th>characters</th>
+    <tr *ngFor="let book of books">
+      <td>{{ book.title }}</td>
+      <td>
+        <p *ngFor="let author of book.authors">{{ author }}</p>
+      </td>
+      <td>{{ book.releaseYear }}</td>
+      <td>{{ book.isbn }}</td>
+      <td><a href="/characters/{{ book.id }}">see all</a></td>
+    </tr>
+  </table>
+</div>

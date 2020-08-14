@@ -7,11 +7,13 @@ import { RequestrService } from './services/requestr.service';
 import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
 import { BooksComponent } from './components/books/books/books.component';
 import { AppComponent } from './components/app/app.component';
+import { CharactersComponent } from './components/books/characters/characters.component';
 
 @NgModule({
   declarations: [
     SplashComponent,
     BooksComponent,
+    CharactersComponent,
     AppComponent
   ],
   imports: [
